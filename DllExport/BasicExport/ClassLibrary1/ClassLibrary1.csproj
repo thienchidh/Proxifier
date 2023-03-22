@@ -7,9 +7,9 @@
     <ProjectGuid>{F45CCD29-9163-4769-A684-B428B68DD20E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassLibrary1</RootNamespace>
-    <AssemblyName>ClassLibrary1</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>Proxifier</RootNamespace>
+    <AssemblyName>proxifier</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -71,7 +71,11 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alg.cs" />
+    <Compile Include="Core\ProxyRouter.cs" />
+    <Compile Include="Launcher.cs" />
+    <Compile Include="Models\Process.cs" />
+    <Compile Include="Models\ServerInfo.cs" />
+    <Compile Include="Models\ServerType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +83,12 @@
       <Version>1.7.4</Version>
       <Visible>false</Visible>
       <Wz>1</Wz>
+    </PackageReference>
+    <PackageReference Include="FiddlerCore5">
+      <Version>5.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Security">
+      <Version>4.3.2</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
